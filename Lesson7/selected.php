@@ -46,6 +46,19 @@
         <tr>
             <td><a href="main.php">Back to Main</a></td>
         </tr>
+        <tr>
+            <td><a href="edit.php?id=<?= $post['id'] ?>">Edit</a></td>
+        </tr>
+        <tr>
+            <td>
+                <form action="delete.php" method="POST">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="id" value="<?= $post['id'] ?>">
+                    <input type="submit" name="submit" value="Delete">
+
+                </form>
+            </td>
+        </tr>
     </table>
     
 </body>
