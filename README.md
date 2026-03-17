@@ -3,9 +3,8 @@
 This repository contains a collection of project and activity files completed for the Application Development course.
 The contents cover the courses' complete curriculum, ranging from the fundamentals of PHP to advanced server-side development.
 
----
 
-### Lesson 1 Data types, Variables and Built in functions
+## Lesson 1: Data types, Variables and Built in functions
 
 - Tags Printing and Comments
 - Variables
@@ -16,9 +15,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - String Functions
 - Date Function
 
-<hr/>
-
-### Lesson 2 Array and Iteration
+## Lesson 2: Arrays and Iteration
 
 - Intro to Array
 - Array functions
@@ -29,9 +26,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - Looping through array
 - Multi Dimensional Array Iteration
 
-<hr/>
-
-### Lesson 3 Control Structures and Conditionals
+## Lesson 3: Control Structures and Conditionals
 
 - IF Statement
 - Conditional HTML Output
@@ -41,9 +36,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - Ternary operator
 - Null Coalescing operator
 
-<hr/>
-
-### Lesson 4 Functions
+## Lesson 4: Functions
 
 - Functions and Return Value
 - Functions Arguments
@@ -54,9 +47,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - Call Back Function
 - Arrow Function
 
-<hr/>
-
-### Lesson 5 OOP
+## Lesson 5: OOP
 
 - Creating a Class and Constructor
 - Access Modifiers, Getter & Setters
@@ -65,9 +56,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - Abstract Classes
 - Interfaces
 
-<hr/>
-
-### Lesson 6 Super Globals
+## Lesson 6: Super Globals
 
 - Super Global $\_GET
 - Super Global $\_POST
@@ -75,9 +64,7 @@ The contents cover the courses' complete curriculum, ranging from the fundamenta
 - Super Global $\_COOKIE
 - Super Global $\_FILES
 
-<hr/>
-
-### Lesson 7 Database Integration and IPO
+## Lesson 7: Database Integration and IPO
 
 - Introduction to Database and PDO
 - Setup Database Environment
