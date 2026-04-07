@@ -10,7 +10,7 @@
     }
 
     //SELECT statement with placeholder for id
-    $sql = 'SELECT * FROM books WHERE id=:id';
+    $sql = "SELECT id, title, author, DATE_FORMAT(publicationDate, '%M %e, %Y') AS formattedDate, descriptions, bookCover FROM books WHERE id=:id";
 
     //prepare the SELECt statement
     $stmt = $pdo->prepare($sql);
@@ -74,6 +74,7 @@
                             <div class="col-md-8">
                                 <h2 style="margin-top: 0; color: #333;"><strong><?= htmlspecialchars($book['title']) ?></strong></h2>
                                 <h4 class="text-muted">by <?= htmlspecialchars($book['author']) ?></h4>
+                                <h4 class="text-muted">Published on: <?= htmlspecialchars($book['formattedDate']) ?></h4>
                                 
                                 <div class="description-text">
                                     <p><?= nl2br(htmlspecialchars($book['descriptions'])) ?></p>

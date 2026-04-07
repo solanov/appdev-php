@@ -2,7 +2,8 @@
     include('db.php');
 
     // Prepare a SELECT statement
-    $stmt = $pdo->prepare('SELECT * FROM books');
+    $sql = "SELECT id, title, author, DATE_FORMAT(publicationDate, '%M %e, %Y') AS formattedDate, descriptions, bookCover FROM books";
+    $stmt = $pdo->prepare($sql);
 
     // Execute the statement
     $stmt->execute();
@@ -98,7 +99,7 @@
                                 <a href="selected.php?id=<?= $book['id'] ?>"><strong><?= htmlspecialchars($book['title']) ?></strong></a>
                             </td>
                             <td><?= htmlspecialchars($book['author']) ?></td>
-                            <td><?= htmlspecialchars($book['publicationDate']) ?></td>
+                            <td><?= htmlspecialchars($book['formattedDate']) ?></td>
                             <td><?= htmlspecialchars($book['descriptions']) ?></td>
                         </tr>
                         <?php endforeach;?>

@@ -2,7 +2,8 @@
     include('db.php');
 
     // Prepare a SELECT statement
-    $stmt = $pdo->prepare('SELECT * FROM books');
+    $sql = "SELECT id, title, author, DATE_FORMAT(publicationDate, '%M %e, %Y') AS formattedDate, descriptions, bookCover FROM books";
+    $stmt = $pdo->prepare($sql);
 
     // Execute the statement
     $stmt->execute();
@@ -17,7 +18,7 @@
         // If the keyword isn't empty, filter the books
         if (!empty($keyword)) {
             $books = array_filter($books, function($b) use ($keyword) {
-                return stripos($b['title'], $keyword) !== false || stripos($b['author'], $keyword) !== false;
+                return stripos($b['title'], $keyword) !== false || stripos($b['author'], $keyword) !== false || stripos($b['formattedDate'], $keyword) !== false;
             });
         }
     }
@@ -105,7 +106,7 @@
                                     <a href="selected.php?id=<?= $book['id'] ?>"><strong><?= htmlspecialchars($book['title']) ?></strong></a>
                                     </td>
                                     <td><?= htmlspecialchars($book['author']) ?></td>
-                                    <td><?= htmlspecialchars($book['publicationDate']) ?></td>
+                                    <td><?= htmlspecialchars($book['formattedDate']) ?></td>
                                     <td><?= htmlspecialchars($book['descriptions']) ?></td>
                                 </tr>
                         <?php endforeach;?>
